@@ -17,4 +17,4 @@ src/            # Исходные файлы
   pages/catalog.pug   # - страница с тестовым заданием
 ```
 
-[Ссылка](https://egenie-mih.github.io/funbox.V2/build/catalog.html) на проект
+[Ссылка](https://egenie-mih.github.io/funbox.v2/build/catalog.html) на проект
