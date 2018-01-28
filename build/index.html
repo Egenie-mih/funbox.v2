@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta content="notranslate" name="google">
+  <title>Главная</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if (isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if (typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--' + key;
+            if (typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if (isMobile[key][type]) rootClasses += ' is-mobile--' + key + '-' + type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      } else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+</head>
+
+<body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
+  <div class="page__inner">
+    <header class="page-header" role="banner">
+      <div class="page-header__inner"></div>
+    </header>
+    <p>Содержимое. <a href="blocks-demo.html">Библиотека блоков</a>.</p>
+    <footer class="page-footer" role="contentinfo">
+      <div class="page-footer__inner">
+        <p>«Подвал»</p>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta content="notranslate" name="google">
+  <title>Нямушка</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if (isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if (typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--' + key;
+            if (typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if (isMobile[key][type]) rootClasses += ' is-mobile--' + key + '-' + type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      } else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+</head>
+
+<body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
+  <div class="page__inner">
+
+    <section class="catfood">
+      <div class="catfood__container"><b class="catfood__title">Ты сегодня покормил кота?</b>
+        <div class="catfood__list">
+
+          <article class="product-item">
+            <div class="product-item__card">
+              <p class="product-item__promo">Сказочное заморское яство</p>
+              <p class="product-item__cancel">Котэ не одобряет?</p>
+              <div class="product-item__description">
+                <h2 class="product-item__name">Нямушка<span class="product-item__taste">с фуа-гра</span></h2>
+                <div class="product-item__content">
+                  <p class="product-item__portion"><span class="product-item__portion-amount">10</span>&nbsp;порций</p>
+                  <p class="product-item__gift"><span class="product-item__gift-amount">мышь</span>&nbsp;в подарок</p>
+                </div>
+              </div>
+              <div class="product-item__weight"><span class="product-item__weight-number">0,5</span><span class="product-item__weight-units">кг</span></div>
+              <div class="product-item__image"><img src="img/cat.png" alt="Нямушка с фуа-гра" width="312" height="269" /></div>
+            </div>
+            <p class="product-item__buy-text">Чего сидишь? Порадуй котэ,&#8194;<button class="product-item__buy-button" type="button">купи</button>.</p>
+            <p class="product-item__check-text">Печень утки разварная с артишоками.</p>
+            <p class="product-item__disable-text">Печалька, с фуа-гра закончился.</p>
+          </article>
+
+          <article class="product-item product-item--checked">
+            <div class="product-item__card">
+              <p class="product-item__promo">Сказочное заморское яство</p>
+              <p class="product-item__cancel">Котэ не одобряет?</p>
+              <div class="product-item__description">
+                <h2 class="product-item__name">Нямушка<span class="product-item__taste">с рыбой</span></h2>
+                <div class="product-item__content">
+                  <p class="product-item__portion"><span class="product-item__portion-amount">40</span>&nbsp;порций</p>
+                  <p class="product-item__gift"><span class="product-item__gift-amount"><b>2</b>мыши</span>&nbsp;в подарок</p>
+                </div>
+              </div>
+              <div class="product-item__weight"><span class="product-item__weight-number">2</span><span class="product-item__weight-units">кг</span></div>
+              <div class="product-item__image"><img src="img/cat.png" alt="Нямушка с рыбой" width="312" height="269" /></div>
+            </div>
+            <p class="product-item__buy-text">Чего сидишь? Порадуй котэ,&#8194;<button class="product-item__buy-button" type="button">купи</button>.</p>
+            <p class="product-item__check-text">Головы щучьи с чесноком да свежайшая сёмгушка.</p>
+            <p class="product-item__disable-text">Печалька, с рыбой закончился.</p>
+          </article>
+
+          <article class="product-item product-item--disabled">
+            <div class="product-item__card">
+              <p class="product-item__promo">Сказочное заморское яство</p>
+              <p class="product-item__cancel">Котэ не одобряет?</p>
+              <div class="product-item__description">
+                <h2 class="product-item__name">Нямушка<span class="product-item__taste">с курой</span></h2>
+                <div class="product-item__content">
+                  <p class="product-item__portion"><span class="product-item__portion-amount">100</span>&nbsp;порций</p>
+                  <p class="product-item__gift"><span class="product-item__gift-amount"><b>5</b>мышей</span>&nbsp;в подарок</p>
+                  <p class="product-item__customer">Заказчик доволен</p>
+                </div>
+              </div>
+              <div class="product-item__weight"><span class="product-item__weight-number">5</span><span class="product-item__weight-units">кг</span></div>
+              <div class="product-item__image"><img src="img/cat.png" alt="Нямушка с курой" width="312" height="269" /></div>
+            </div>
+            <p class="product-item__buy-text">Чего сидишь? Порадуй котэ,&#8194;<button class="product-item__buy-button" type="button">купи</button>.</p>
+            <p class="product-item__check-text">Филе из цыплят с трюфелями в бульоне.</p>
+            <p class="product-item__disable-text">Печалька, с курой закончился.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>
