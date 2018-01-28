@@ -254,6 +254,8 @@ pre {
   width: 100%;
   min-height: 100%;
   padding: 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(50%, transparent), to(rgba(0, 0, 0, 0.5))), url("../img/catfood-bg.jpg");
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, transparent 50%, rgba(0, 0, 0, 0.5) 100%), url("../img/catfood-bg.jpg");
   -webkit-box-pack: center;
@@ -317,48 +319,28 @@ _:-ms-fullscreen,
 .product-item {
   position: relative;
   width: 320px;
-  margin-top: 45px;
   margin-bottom: 20px; }
 .product-item:last-child {
     margin-bottom: 0; }
 .product-item:before {
     position: absolute;
     z-index: 0;
-    top: -45px;
-    left: 22px;
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    width: 160px;
-    height: 45px;
+    top: 44px;
+    left: 3px;
+    width: 312px;
+    height: 6px;
     content: '';
-    cursor: pointer;
-    -webkit-transform: skew(-45deg);
-    transform: skew(-45deg);
-    border-top: 4px solid #1698d9;
-    border-left: 4px solid #1698d9;
+    border-radius: 6px;
     background-color: #f2f2f2; }
-.product-item:after {
-    position: absolute;
-    z-index: 0;
-    top: -45px;
-    right: 0;
-    display: inline-block;
-    width: 160px;
-    height: 45px;
-    content: '';
-    cursor: pointer;
-    border-top: 4px solid #1698d9;
-    border-right: 4px solid #1698d9;
-    border-top-right-radius: 12px;
-    background-color: #f2f2f2; }
-.product-item--disabled:after, .product-item--disabled:before {
+.product-item--disabled .product-item__card:after,
+  .product-item--disabled .product-item__card:before {
     border-color: #b3b3b3; }
 .product-item--disabled:hover {
     border-color: #b3b3b3; }
 .product-item--disabled:hover .product-item__weight {
       background-color: #b3b3b3; }
-.product-item--disabled:hover:after, .product-item--disabled:hover:before {
+.product-item--disabled:hover .product-item__card:after,
+    .product-item--disabled:hover .product-item__card:before {
       border-color: #b3b3b3; }
 .product-item--disabled .product-item__card {
     cursor: default;
@@ -375,7 +357,8 @@ _:-ms-fullscreen,
     display: block; }
 .product-item--disabled .product-item__buy-text {
     display: none; }
-.product-item--checked:after, .product-item--checked:before {
+.product-item--checked .product-item__card:after,
+  .product-item--checked .product-item__card:before {
     border-color: #d91667; }
 .product-item--checked .product-item__card {
     border-color: #d91667; }
@@ -391,7 +374,8 @@ _:-ms-fullscreen,
       background-color: #e52e7a; }
 .product-item--checked:hover .product-item__card {
       border-color: #e52e7a; }
-.product-item--checked:hover:after, .product-item--checked:hover:before {
+.product-item--checked:hover .product-item__card:after,
+    .product-item--checked:hover .product-item__card:before {
       border-color: #e52e7a; }
 .product-item--checked-hover:hover .product-item__cancel {
     display: inline-block; }
@@ -406,16 +390,38 @@ _:-ms-fullscreen,
   border-top: 0;
   border-radius: 0 0 12px 12px;
   background-color: #f2f2f2;
-  min-height: 435px; }
+  min-height: 435px;
+  margin-top: 45px; }
 .product-item__card:before {
     position: absolute;
     z-index: 0;
-    top: -2px;
-    left: 1px;
-    width: 312px;
-    height: 6px;
+    top: -45px;
+    left: 19px;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 160px;
+    height: 45px;
     content: '';
-    border-radius: 6px;
+    cursor: pointer;
+    -webkit-transform: skew(-45deg);
+    transform: skew(-45deg);
+    border-top: 4px solid #1698d9;
+    border-left: 4px solid #1698d9;
+    background-color: #f2f2f2; }
+.product-item__card:after {
+    position: absolute;
+    z-index: 0;
+    top: -45px;
+    right: -4px;
+    display: inline-block;
+    width: 160px;
+    height: 45px;
+    content: '';
+    cursor: pointer;
+    border-top: 4px solid #1698d9;
+    border-right: 4px solid #1698d9;
+    border-top-right-radius: 12px;
     background-color: #f2f2f2; }
 .product-item__promo {
   font-size: 16px;
