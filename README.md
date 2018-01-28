@@ -1,4 +1,4 @@
-# Тестовое задание для FunBox
+# Тестовое задание для «FunBox»
 
 ## Назначение папок
 
@@ -16,3 +16,5 @@ src/            # Исходные файлы
   pages/index.pug     # - главная страница проекта
   pages/catalog.pug   # - страница с тестовым заданием
 ```
+
+[Ссылка](https://egenie-mih.github.io/funbox.V2/build/catalog.html) на проект

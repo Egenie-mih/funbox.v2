@@ -18,6 +18,51 @@
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+
+    &__container
+    {
+
+        box-sizing: border-box;
+        width: 100%;
+
+        @media (min-width: 380px)
+        {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        @media #{$desktop-widths}
+        {
+            max-width: 1150px;
+        }
+    }
+
+    &__title
+    {
+        font: 100 36px/1 $font-exo;
+
+        display: block;
+
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 27px;
+        padding: 0 15px;
+
+        text-align: center;
+
+        color: $font-white;
+    }
+
+    &__list
+    {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+
+        justify-content: center;
+        align-items: center;
+    }
 }
 /* Internet Explorer 11+ */
 _:-ms-fullscreen,
@@ -43,64 +88,22 @@ _:-ms-fullscreen,
     flex-grow: 1;
 }
 
-.catfood__container
-{
-
-    box-sizing: border-box;
-    width: 100%;
-
-    @media (min-width: 380px)
-    {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-
-    @media #{$desktop-widths}
-    {
-        max-width: 1150px;
-    }
-}
-
-.catfood__title
-{
-    font: 100 36px/1 $font-exo;
-
-    display: block;
-
-    box-sizing: border-box;
-    width: 100%;
-    margin-bottom: 27px;
-    padding: 0 15px;
-
-    text-align: center;
-
-    color: $font-white;
-}
-
-.catfood__list
-{
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-
-    justify-content: center;
-    align-items: center;
-}
-
 @media #{$tablet-widths}
 {
-    .catfood__list
+    .catfood
     {
-        flex-direction: row;
+        &__list
+        {
+            flex-direction: row;
 
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: space-around;
-    }
-    .catfood__title
-    {
-        padding: 0;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-around;
+        }
+        &__title
+        {
+            padding: 0;
+        }
     }
 }
 
@@ -108,10 +111,11 @@ _:-ms-fullscreen,
 {
     .catfood
     {
-      padding: 0;
-    }
-    .catfood__list
-    {
-        justify-content: space-between;
+        padding: 0;
+
+        &__list
+        {
+            justify-content: space-between;
+        }
     }
 }
