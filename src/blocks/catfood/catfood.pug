@@ -1,0 +1,20 @@
+//- Все примеси в этом файле должны начинаться c имени блока (catfood)
+
+mixin catfood(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' catfood--' + modsList[i].trim();
+      }
+    }
+  section.catfood(class=allMods)
+    .catfood__container
+      b.catfood__title Ты сегодня покормил кота?
+      .catfood__list
+        block
